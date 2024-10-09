@@ -104,6 +104,8 @@ Both models generated RMSE values that indicate how well they predicted the sale
 #### Overall Model Findings:
 
 My main takeaway from the results is determining which model (XGBoost or LSTM) was better at predicting sales. I also saw whether adding features like lagged sales or rolling averages helped improve prediction accuracy.
+![LSTM Actual vs Prediction](LSTM-ACTvsPRED.png)
+![XGBoost Actual vs Prediction](XGB-ACTvsPRED.png)
 
 ## Next steps
 #### Real-time Forecasting:
@@ -111,7 +113,7 @@ Once the model is well-tuned, I could consider deploying it in a real-time envir
 #### Automate Forecasts:
 Automating the forecast process could help the organization predict future sales regularly without manual intervention, aiding in more efficient decision-making.
 
-#### Monitor Model Performance: 
+#### Monitor Model Performance:
 After deployment, it’s crucial to keep track of the model’s performance and adjust it based on new data or changing sales patterns.
 #### Continuous Improvement:
 I would continuously refine the model as more data becomes available or as business needs change, ensuring that the forecasts remain accurate and useful over time.
