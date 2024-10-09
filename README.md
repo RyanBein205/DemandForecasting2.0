@@ -1,7 +1,9 @@
 # Project Title
 DemandForecasting2.0
+
 **Author**
 Ryan Bein
+
 ## Executive summary
 #### Objective:
 The primary goal of this project is to develop a demand forecasting model for predicting future sales using time-series data. Accurate demand forecasting is crucial for effective inventory management, production planning, and supply chain optimization in manufacturing and distribution environments.
@@ -17,6 +19,8 @@ The analysis leveraged the M5 Forecasting Accuracy dataset from Kaggle, which in
 ##### Three datasets were used:
 sales history, calendar information (e.g., holidays and special events), and product price data. 
 A 10% sample of the sales data was taken for analysis.
+
+![SalesSample10percent](SalesSample10percent.png)
 ##### Exploratory Data Analysis (EDA):
 
 A time-series plot of total sales over time was created to visualize overall sales trends.
@@ -30,6 +34,8 @@ Additional lags: lag_30, lag_60, lag_90 (representing monthly and quarterly sale
 ##### Train-Test Split:
 
 The dataset was split into training (80%) and testing (20%) sets based on time, ensuring that the model only sees data from the past to predict future values.
+![DataSetSplitBarChart](DataSetSplitBarChart.png)
+
 ##### Modeling:
 
 Models such as ARIMA, XGBoost, and LSTM were considered for forecasting. These models leverage both lagged features and rolling windows to capture temporal dependencies and improve the predictive power of the model.
@@ -97,10 +103,18 @@ By creating lag features (like lag_1, lag_7, lag_14, lag_30, etc.), I added hist
 #### Model Performance (XGBoost and LSTM):
 
 XGBoost Results: After running the XGBoost model, it likely performed well in capturing the general sales trends and seasonal patterns. The RMSE would have shown how close the model’s predictions were to the actual sales. XGBoost is typically strong for structured data like this.
+![XGBoost Actual vs Prediction](XGB-ACTvsPRED.png)
+![XGBoost Residual Histogram](XGB-ResidDistribution.png)
+![XGBoost Residual over Time](XGB-ResidOverTime.png)
 LSTM Results: Since LSTMs are designed to work with sequential data, this model likely did a good job of capturing longer-term dependencies in the sales data. However, it may have faced challenges with smaller datasets or noisy data, which could have led to a slightly higher RMSE compared to XGBoost.
+![LSTM Actual vs Prediction](LSTM-ACTvsPRED.png)
+![LSTM Residual Histogram](LSTM-ResidDistribution.png)
+![LSTM Residual over Time](LSTM-ResidOverTime.png)
+
 #### RMSE Comparison:
 
 Both models generated RMSE values that indicate how well they predicted the sales compared to the actual figures. A lower RMSE means the model performed better. I likely found that XGBoost performed better if the sales trends were more straightforward, whereas the LSTM model might have performed better if there were more complex patterns in the time series data.
+![RMSE Bar Chart](RMSEBarChart.png)
 #### Overall Model Findings:
 
 My main takeaway from the results is determining which model (XGBoost or LSTM) was better at predicting sales. I also saw whether adding features like lagged sales or rolling averages helped improve prediction accuracy.
@@ -122,6 +136,17 @@ I would continuously refine the model as more data becomes available or as busin
 
 - [Notebook Link](Capstone24.ipynb)
 - [Link to data]https://www.kaggle.com/competitions/m5-forecasting-accuracy/data
-- []
+- [LSTM Actual vs Prediction](LSTM-ACTvsPRED.png)
+- [XGBoost Actual vs Prediction](XGB-ACTvsPRED.png)
+- [RMSE Bar Chart](RMSEBarChart.png)
+- [LSTM Actual vs Prediction](LSTM-ACTvsPRED.png)
+- [LSTM Residual Histogram](LSTM-ResidDistribution.png)
+- [LSTM Residual over Time](LSTM-ResidOverTime.png)
+- [XGBoost Actual vs Prediction](XGB-ACTvsPRED.png)
+- [XGBoost Residual Histogram](XGB-ResidDistribution.png)
+- [XGBoost Residual over Time](XGB-ResidOverTime.png)
+- [DataSetSplitBarChart](DataSetSplitBarChart.png)
+- [SalesSample10percent](SalesSample10percent.png)
 
 #### Contact and Further Information
+I can always be reached directly by E-mail RyanBein@yahoo.com
