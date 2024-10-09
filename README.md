@@ -119,5 +119,7 @@ I would continuously refine the model as more data becomes available or as busin
 ## Outline of project
 
 - [Notebook Link](Capstone24.ipynb)
+- [Link to data]https://www.kaggle.com/competitions/m5-forecasting-accuracy/data
+- []
 
 #### Contact and Further Information
